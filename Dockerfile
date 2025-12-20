@@ -29,11 +29,15 @@ WORKDIR /app
 ENV NODE_ENV=production
 ENV NEXT_TELEMETRY_DISABLED=1
 
+# 🔑 Variáveis de rede corretas
+ENV PORT=3000
+ENV HOSTNAME=0.0.0.0
+
 # Usuário não-root (segurança)
 RUN addgroup -g 1001 -S nodejs \
   && adduser -S nextjs -u 1001
 
-# Copia apenas o necessário
+# Copiar apenas o necessário
 COPY --from=builder /app/public ./public
 COPY --from=builder /app/.next/standalone ./
 COPY --from=builder /app/.next/static ./.next/static
