@@ -108,7 +108,6 @@ export default function HomePage() {
       <section className="home-hero">
         <div className="home-hero-copy">
           <span className="home-eyebrow">
-            <Sparkles size={16} />
             Desenvolvedor Full Stack • Automações • IA aplicada
           </span>
           <h1>Sistemas web, automações e IA para operações reais.</h1>
