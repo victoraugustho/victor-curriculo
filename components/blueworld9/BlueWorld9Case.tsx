@@ -1,7 +1,6 @@
 "use client"
 
 import Link from "next/link"
-import Image from "next/image"
 import { motion, useScroll, useTransform } from "framer-motion"
 import {
   Activity,
@@ -126,45 +125,6 @@ const technicalChallenges = [
   },
 ]
 
-const gallery = [
-  {
-    title: "Dashboard operacional",
-    label: "img1",
-    src: "/blueworld9/dashboard.png",
-    description:
-      "Parâmetros de análise, métricas acadêmicas, qualidade operacional, alertas gerenciais e acompanhamento por turma.",
-    className: "featured",
-  },
-  {
-    title: "Gestão de turmas",
-    label: "img2",
-    src: "/blueworld9/turmas.png",
-    description:
-      "Fluxo de criação, busca, manutenção de turmas, vínculo com agenda, alunos e professor selecionado.",
-  },
-  {
-    title: "Controle de presença",
-    label: "img3",
-    src: "/blueworld9/presenca.png",
-    description:
-      "Lançamento de presença, ciclos avaliativos e observações em uma interface de rotina acadêmica.",
-  },
-  {
-    title: "Auditoria completa",
-    label: "img4",
-    src: "/blueworld9/auditoria.png",
-    description:
-      "Registro de ações, rotas, status, filtros e rastreabilidade para governança operacional.",
-    className: "wide",
-  },
-  {
-    title: "Mobile professor",
-    label: "img5",
-    src: "/blueworld9/mobile-professor.png",
-    description:
-      "Experiência responsiva com navegação por módulos, administração e acesso rápido às rotinas do professor.",
-  },
-]
 
 const learnings = [
   "Arquitetura de SaaS educacional precisa começar pelo modelo de permissão, não pela interface.",
@@ -225,8 +185,8 @@ export default function BlueWorld9Case() {
               <a href="#arquitetura" className="bw-primary">
                 Ver arquitetura <ArrowRight size={18} />
               </a>
-              <a href="#galeria" className="bw-secondary">
-                Explorar telas
+              <a href="#impacto" className="bw-secondary">
+                Ver impacto
               </a>
             </div>
           </motion.div>
@@ -467,35 +427,6 @@ export default function BlueWorld9Case() {
         </Reveal>
       </section>
 
-      <section className="bw-section" id="galeria">
-        <Reveal>
-          <SectionLabel icon={<BarChart3 />}>Galeria do produto</SectionLabel>
-          <div className="bw-gallery">
-            {gallery.map((item) => (
-              <motion.article
-                className={item.className ?? ""}
-                key={item.title}
-                whileHover={{ y: -8 }}
-                transition={{ type: "spring", stiffness: 240, damping: 22 }}
-              >
-                <div className="bw-gallery-image">
-                  <Image
-                    src={item.src}
-                    alt={`${item.title} - BlueWorld9`}
-                    width={item.className === "featured" ? 1200 : 760}
-                    height={item.className === "featured" ? 675 : 520}
-                  />
-                </div>
-                <div className="bw-gallery-caption">
-                  <span>{item.label}</span>
-                  <h3>{item.title}</h3>
-                  <p>{item.description}</p>
-                </div>
-              </motion.article>
-            ))}
-          </div>
-        </Reveal>
-      </section>
 
       <section className="bw-section bw-learning">
         <Reveal>
@@ -596,3 +527,4 @@ function TechCard({ title, text }: { title: string; text: string }) {
     </article>
   )
 }
+

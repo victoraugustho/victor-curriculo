@@ -12,7 +12,6 @@ import {
   MapPin,
   Phone,
   ShieldCheck,
-  Sparkles,
   Workflow,
 } from "lucide-react"
 
@@ -67,7 +66,7 @@ const projects = [
     title: "JAMES",
     eyebrow: "Assistente operacional",
     status: "Automação interna",
-    href: "#contato",
+    href: "/projetos/james",
     text: "Automação com WhatsApp, agenda, planilhas, PostgreSQL, IA e fluxos operacionais centralizados.",
     impact: ["WhatsApp", "agenda", "dados centralizados"],
     tags: ["n8n", "APIs", "PostgreSQL", "WhatsApp"],
