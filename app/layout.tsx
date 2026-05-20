@@ -15,8 +15,9 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://curriculo.autonextech.com.br"),
   title: {
-    default: "Victor Augustho | Desenvolvedor & Automação",
+    default: "Victor Augustho | Desenvolvedor Full Stack",
     template: "%s | Victor Augustho",
   },
   icons: {
@@ -25,7 +26,15 @@ export const metadata: Metadata = {
     apple: "/apple-icon.png",
   },
   description:
-    "Desenvolvedor web focado em automações, sistemas personalizados e inteligência artificial.",
+    "Portfólio de Victor Augustho, desenvolvedor full stack focado em sistemas web, automações, integrações e IA aplicada.",
+  openGraph: {
+    title: "Victor Augustho | Desenvolvedor Full Stack",
+    description:
+      "Portfólio de Victor Augustho, desenvolvedor full stack focado em sistemas web, automações, integrações e IA aplicada.",
+    url: "https://curriculo.autonextech.com.br",
+    siteName: "Victor Augustho",
+    type: "website",
+  },
 }
 
 export default function RootLayout({
